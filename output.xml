@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-17T22:15:33.083133" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot-Appium" source="C:\Users\AOF_ANUCHA\Desktop\basic-appium\robot-appium.robot">
+<test id="s1-t1" name="Open test application for android" line="9">
+<kw name="open test app">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>deviceName=TestDevice</arg>
+<arg>platformVersion=14.0</arg>
+<arg>platformName=Android</arg>
+<arg>appPackage=com.material.components</arg>
+<arg>appActivity=code.ActivityMainMenu</arg>
+<arg>autoGrantPermissions=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-06-17T22:15:33.508823" elapsed="21.572337"/>
+</kw>
+<status status="PASS" start="2024-06-17T22:15:33.507822" elapsed="21.574335"/>
+</kw>
+<kw name="close popup when start">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-17T22:15:55.812677" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<arg>id=com.material.components:id/bt_close</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-17T22:15:55.084150" elapsed="0.728527"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-17T22:15:55.816677" level="INFO">Clicking element 'id=com.material.components:id/bt_close'.</msg>
+<msg time="2024-06-17T22:15:58.415395" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<arg>id=com.material.components:id/bt_close</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-17T22:15:55.812677" elapsed="2.602718"/>
+</kw>
+<status status="PASS" start="2024-06-17T22:15:55.083153" elapsed="3.333239"/>
+</kw>
+<status status="PASS" start="2024-06-17T22:15:33.506784" elapsed="24.910610"/>
+</test>
+<status status="PASS" start="2024-06-17T22:15:33.085173" elapsed="25.335229"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot-Appium">Robot-Appium</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
