@@ -9,6 +9,9 @@ Library    AppiumLibrary
 Open test application for android
     open test app
     close popup when start
+    click search icon on topbar
+    input search into search bar    icon
+    click button Nevigation Icon
 
 *** Keywords ***
 open test app
@@ -21,9 +24,27 @@ open test app
     ...    autoGrantPermissions=true
 
 close popup when start
-    # Wait Until Page Contains Element    id=com.android.permissioncontroller:id/permission_allow_button    30s
-    # Tap With Positions    id=com.android.permissioncontroller:id/permission_allow_button
-    # Tap with Positions    locations=@{firstFinger}
     Wait Until Page Contains Element    id=com.material.components:id/bt_close    30s
     Click Element    id=com.material.components:id/bt_close
     # Tap With Positions    locations=@{firstFinger}
+
+click search icon on topbar
+    Wait Until Page Contains Element    accessibility_id=Search    30s
+    Click Element    accessibility_id=Search
+
+
+    # id=com.material.components:id/search_src_text
+
+input search into search bar
+    [Arguments]    ${kw}
+    Wait Until Page Contains Element    id=com.material.components:id/search_src_text    30s
+    Input Text    id=com.material.components:id/search_src_text    ${kw}
+
+# //android.widget.TextView[@resource-id="com.material.components:id/tv_parent" and @text="Bottom Navigation"]
+
+
+# //android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]  
+
+click button Nevigation Icon 
+    Wait Until Page Contains Element    xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]  
+    Click Element    xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]

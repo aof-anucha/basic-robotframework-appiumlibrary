@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-17T22:15:33.083133" rpa="false" schemaversion="5">
-<suite id="s1" name="Robot-Appium" source="C:\Users\AOF_ANUCHA\Desktop\basic-appium\robot-appium.robot">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-18T16:34:29.287951" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot-Appium" source="C:\Users\AOF_ANUCHA\Documents\GitHub\basic-robotframework-appiumlibrary\robot-appium.robot">
 <test id="s1-t1" name="Open test application for android" line="9">
 <kw name="open test app">
 <kw name="Open Application" owner="AppiumLibrary">
@@ -18,30 +18,80 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-06-17T22:15:33.508823" elapsed="21.572337"/>
+<status status="PASS" start="2024-06-18T16:34:29.630238" elapsed="17.819741"/>
 </kw>
-<status status="PASS" start="2024-06-17T22:15:33.507822" elapsed="21.574335"/>
+<status status="PASS" start="2024-06-18T16:34:29.629229" elapsed="17.820750"/>
 </kw>
 <kw name="close popup when start">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-06-17T22:15:55.812677" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<msg time="2024-06-18T16:34:48.525499" level="INFO">criteria is com.material.components:id/bt_close</msg>
 <arg>id=com.material.components:id/bt_close</arg>
 <arg>30s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-06-17T22:15:55.084150" elapsed="0.728527"/>
+<status status="PASS" start="2024-06-18T16:34:47.451978" elapsed="1.073521"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-06-17T22:15:55.816677" level="INFO">Clicking element 'id=com.material.components:id/bt_close'.</msg>
-<msg time="2024-06-17T22:15:58.415395" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<msg time="2024-06-18T16:34:48.526494" level="INFO">Clicking element 'id=com.material.components:id/bt_close'.</msg>
+<msg time="2024-06-18T16:34:48.947014" level="INFO">criteria is com.material.components:id/bt_close</msg>
 <arg>id=com.material.components:id/bt_close</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-06-17T22:15:55.812677" elapsed="2.602718"/>
+<status status="PASS" start="2024-06-18T16:34:48.525499" elapsed="0.421515"/>
 </kw>
-<status status="PASS" start="2024-06-17T22:15:55.083153" elapsed="3.333239"/>
+<status status="PASS" start="2024-06-18T16:34:47.450980" elapsed="1.496034"/>
 </kw>
-<status status="PASS" start="2024-06-17T22:15:33.506784" elapsed="24.910610"/>
+<kw name="click search icon on topbar">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>accessibility_id=Search</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-18T16:34:48.948013" elapsed="0.569001"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-18T16:34:49.519029" level="INFO">Clicking element 'accessibility_id=Search'.</msg>
+<arg>accessibility_id=Search</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-18T16:34:49.517014" elapsed="6.110072"/>
+</kw>
+<status status="PASS" start="2024-06-18T16:34:48.948013" elapsed="6.680069"/>
+</kw>
+<kw name="input search into search bar">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-18T16:34:56.258209" level="INFO">criteria is com.material.components:id/search_src_text</msg>
+<arg>id=com.material.components:id/search_src_text</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-18T16:34:55.629088" elapsed="0.629121"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-06-18T16:34:56.260208" level="INFO">Typing text 'icon' into text field 'id=com.material.components:id/search_src_text'</msg>
+<msg time="2024-06-18T16:34:56.997212" level="INFO">criteria is com.material.components:id/search_src_text</msg>
+<arg>id=com.material.components:id/search_src_text</arg>
+<arg>${kw}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-06-18T16:34:56.258209" elapsed="0.739003"/>
+</kw>
+<arg>icon</arg>
+<status status="PASS" start="2024-06-18T16:34:55.628082" elapsed="1.370113"/>
+</kw>
+<kw name="click button Nevigation Icon">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-18T16:35:01.312194" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</msg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-18T16:34:56.999196" elapsed="4.312998"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-18T16:35:01.313191" level="INFO">Clicking element 'xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]'.</msg>
+<msg time="2024-06-18T16:35:01.820490" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</msg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-18T16:35:01.312194" elapsed="0.509296"/>
+</kw>
+<status status="PASS" start="2024-06-18T16:34:56.998195" elapsed="4.823295"/>
+</kw>
+<status status="PASS" start="2024-06-18T16:34:29.628206" elapsed="32.194293"/>
 </test>
-<status status="PASS" start="2024-06-17T22:15:33.085173" elapsed="25.335229"/>
+<status status="PASS" start="2024-06-18T16:34:29.289949" elapsed="32.534546"/>
 </suite>
 <statistics>
 <total>
