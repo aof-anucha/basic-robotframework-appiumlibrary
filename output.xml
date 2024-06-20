@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-18T16:34:29.287951" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-20T15:42:55.281293" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot-Appium" source="C:\Users\AOF_ANUCHA\Documents\GitHub\basic-robotframework-appiumlibrary\robot-appium.robot">
-<test id="s1-t1" name="Open test application for android" line="9">
-<kw name="open test app">
+<test id="s1-t1" name="Open test application for android" line="13">
+<kw name="open test app" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>remote_url=http://localhost:4723/wd/hub</arg>
 <arg>deviceName=TestDevice</arg>
@@ -18,89 +18,347 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-06-18T16:34:29.630238" elapsed="17.819741"/>
-</kw>
-<status status="PASS" start="2024-06-18T16:34:29.629229" elapsed="17.820750"/>
+<status status="PASS" start="2024-06-20T15:42:55.690303" elapsed="17.032344"/>
 </kw>
 <kw name="close popup when start">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-06-18T16:34:48.525499" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<msg time="2024-06-20T15:43:14.785963" level="INFO">criteria is com.material.components:id/bt_close</msg>
 <arg>id=com.material.components:id/bt_close</arg>
 <arg>30s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-06-18T16:34:47.451978" elapsed="1.073521"/>
+<status status="PASS" start="2024-06-20T15:43:12.723649" elapsed="2.062314"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-06-18T16:34:48.526494" level="INFO">Clicking element 'id=com.material.components:id/bt_close'.</msg>
-<msg time="2024-06-18T16:34:48.947014" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<msg time="2024-06-20T15:43:14.789965" level="INFO">Clicking element 'id=com.material.components:id/bt_close'.</msg>
+<msg time="2024-06-20T15:43:17.541802" level="INFO">criteria is com.material.components:id/bt_close</msg>
 <arg>id=com.material.components:id/bt_close</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-06-18T16:34:48.525499" elapsed="0.421515"/>
+<status status="PASS" start="2024-06-20T15:43:14.786963" elapsed="2.754839"/>
 </kw>
-<status status="PASS" start="2024-06-18T16:34:47.450980" elapsed="1.496034"/>
+<status status="PASS" start="2024-06-20T15:43:12.722647" elapsed="4.819155"/>
+</kw>
+<status status="PASS" start="2024-06-20T15:42:55.689302" elapsed="21.852500"/>
 </kw>
 <kw name="click search icon on topbar">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
 <arg>accessibility_id=Search</arg>
 <arg>30s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-06-18T16:34:48.948013" elapsed="0.569001"/>
+<status status="PASS" start="2024-06-20T15:43:17.543799" elapsed="1.239356"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-06-18T16:34:49.519029" level="INFO">Clicking element 'accessibility_id=Search'.</msg>
+<msg time="2024-06-20T15:43:18.785152" level="INFO">Clicking element 'accessibility_id=Search'.</msg>
 <arg>accessibility_id=Search</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-06-18T16:34:49.517014" elapsed="6.110072"/>
+<status status="PASS" start="2024-06-20T15:43:18.783155" elapsed="2.698236"/>
 </kw>
-<status status="PASS" start="2024-06-18T16:34:48.948013" elapsed="6.680069"/>
+<status status="PASS" start="2024-06-20T15:43:17.542801" elapsed="3.938590"/>
 </kw>
-<kw name="input search into search bar">
+<kw name="input icon into id=com.material.components:id/search_src_text and have placeholder is Search…" source_name="input ${kw} into ${input_field} and have placeholder is ${text}">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-06-18T16:34:56.258209" level="INFO">criteria is com.material.components:id/search_src_text</msg>
-<arg>id=com.material.components:id/search_src_text</arg>
+<msg time="2024-06-20T15:43:22.534924" level="INFO">criteria is com.material.components:id/search_src_text</msg>
+<arg>${input_field}</arg>
 <arg>30s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-06-18T16:34:55.629088" elapsed="0.629121"/>
+<status status="PASS" start="2024-06-20T15:43:21.483387" elapsed="1.051537"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-06-20T15:43:22.537922" level="INFO">Verifying element 'id=com.material.components:id/search_src_text' contains exactly text 'Search…'.</msg>
+<msg time="2024-06-20T15:43:23.368916" level="INFO">criteria is com.material.components:id/search_src_text</msg>
+<arg>${input_field}</arg>
+<arg>${text}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-06-20T15:43:22.534924" elapsed="0.833992"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-06-18T16:34:56.260208" level="INFO">Typing text 'icon' into text field 'id=com.material.components:id/search_src_text'</msg>
-<msg time="2024-06-18T16:34:56.997212" level="INFO">criteria is com.material.components:id/search_src_text</msg>
-<arg>id=com.material.components:id/search_src_text</arg>
+<msg time="2024-06-20T15:43:23.371918" level="INFO">Typing text 'icon' into text field 'id=com.material.components:id/search_src_text'</msg>
+<msg time="2024-06-20T15:43:24.729907" level="INFO">criteria is com.material.components:id/search_src_text</msg>
+<arg>${input_field}</arg>
 <arg>${kw}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-06-18T16:34:56.258209" elapsed="0.739003"/>
+<status status="PASS" start="2024-06-20T15:43:23.368916" elapsed="1.360991"/>
 </kw>
-<arg>icon</arg>
-<status status="PASS" start="2024-06-18T16:34:55.628082" elapsed="1.370113"/>
+<status status="PASS" start="2024-06-20T15:43:21.482391" elapsed="3.247516"/>
 </kw>
 <kw name="click button Nevigation Icon">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-06-18T16:35:01.312194" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</msg>
+<msg time="2024-06-20T15:43:28.621672" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</msg>
 <arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-06-18T16:34:56.999196" elapsed="4.312998"/>
+<status status="PASS" start="2024-06-20T15:43:24.731911" elapsed="3.889761"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-06-18T16:35:01.313191" level="INFO">Clicking element 'xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]'.</msg>
-<msg time="2024-06-18T16:35:01.820490" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</msg>
+<msg time="2024-06-20T15:43:28.622670" level="INFO">Clicking element 'xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]'.</msg>
+<msg time="2024-06-20T15:43:31.014114" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</msg>
 <arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Bottom Navigation"] and android.widget.TextView[@text="Icon"]]</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-06-18T16:35:01.312194" elapsed="0.509296"/>
+<status status="PASS" start="2024-06-20T15:43:28.621672" elapsed="2.392442"/>
 </kw>
-<status status="PASS" start="2024-06-18T16:34:56.998195" elapsed="4.823295"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:43:37.070918" level="INFO">xpath criteria: //android.widget.TextView[@text="New Releases"]
+xpath criteria: //android.widget.TextView[@text="New Releases"]</msg>
+<arg>xpath=//android.widget.TextView[@text="New Releases"]</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-20T15:43:31.014114" elapsed="6.056804"/>
 </kw>
-<status status="PASS" start="2024-06-18T16:34:29.628206" elapsed="32.194293"/>
+<kw name="Element Should Be Enabled" owner="AppiumLibrary">
+<msg time="2024-06-20T15:43:37.563912" level="INFO">Element 'xpath=//android.widget.TextView[@text="New Releases"]' is enabled .</msg>
+<msg time="2024-06-20T15:43:37.563912" level="INFO">xpath criteria: //android.widget.TextView[@text="New Releases"]</msg>
+<arg>xpath=//android.widget.TextView[@text="New Releases"]</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<status status="PASS" start="2024-06-20T15:43:37.070918" elapsed="0.492994"/>
+</kw>
+<kw name="Element Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-06-20T15:43:37.566913" level="INFO">Verifying element 'xpath=//android.widget.TextView[@text="New Releases"]' contains text 'New'.</msg>
+<msg time="2024-06-20T15:43:37.924922" level="INFO">xpath criteria: //android.widget.TextView[@text="New Releases"]</msg>
+<arg>xpath=//android.widget.TextView[@text="New Releases"]</arg>
+<arg>New</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-06-20T15:43:37.563912" elapsed="0.362001"/>
+</kw>
+<kw name="Element Should Not Contain Text" owner="AppiumLibrary">
+<msg time="2024-06-20T15:43:37.927921" level="INFO">Verifying element 'xpath=//android.widget.TextView[@text="New Releases"]' does not contain text 'New a'.</msg>
+<msg time="2024-06-20T15:43:38.296908" level="INFO">xpath criteria: //android.widget.TextView[@text="New Releases"]</msg>
+<arg>xpath=//android.widget.TextView[@text="New Releases"]</arg>
+<arg>New a</arg>
+<doc>Verifies element identified by ``locator`` does not contain text ``expected``.</doc>
+<status status="PASS" start="2024-06-20T15:43:37.925913" elapsed="0.370995"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-06-20T15:43:38.300913" level="INFO">Verifying element 'xpath=//android.widget.TextView[@text="New Releases"]' contains exactly text 'New Releases'.</msg>
+<msg time="2024-06-20T15:43:38.683914" level="INFO">xpath criteria: //android.widget.TextView[@text="New Releases"]</msg>
+<arg>xpath=//android.widget.TextView[@text="New Releases"]</arg>
+<arg>New Releases</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-06-20T15:43:38.298908" elapsed="0.385006"/>
+</kw>
+<status status="PASS" start="2024-06-20T15:43:24.730915" elapsed="13.952999"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-06-20T15:43:38.684906" elapsed="1.369736"/>
+</kw>
+<status status="PASS" start="2024-06-20T15:42:55.689302" elapsed="44.366347"/>
 </test>
-<status status="PASS" start="2024-06-18T16:34:29.289949" elapsed="32.534546"/>
+<test id="s1-t2" name="check expansion panels page" line="20">
+<kw name="open test app" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>deviceName=TestDevice</arg>
+<arg>platformVersion=14.0</arg>
+<arg>platformName=Android</arg>
+<arg>appPackage=com.material.components</arg>
+<arg>appActivity=code.ActivityMainMenu</arg>
+<arg>autoGrantPermissions=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-06-20T15:43:40.059641" elapsed="17.167341"/>
+</kw>
+<kw name="close popup when start">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:43:58.557980" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<arg>id=com.material.components:id/bt_close</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-20T15:43:57.227985" elapsed="1.329995"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:43:58.561981" level="INFO">Clicking element 'id=com.material.components:id/bt_close'.</msg>
+<msg time="2024-06-20T15:44:01.155983" level="INFO">criteria is com.material.components:id/bt_close</msg>
+<arg>id=com.material.components:id/bt_close</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-20T15:43:58.558980" elapsed="2.597003"/>
+</kw>
+<status status="PASS" start="2024-06-20T15:43:57.227985" elapsed="3.928987"/>
+</kw>
+<status status="PASS" start="2024-06-20T15:43:40.058642" elapsed="21.098330"/>
+</kw>
+<kw name="click expansion panels">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:04.272961" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Expansion Panels"]]</msg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Expansion Panels"]]</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-20T15:44:01.157970" elapsed="3.114991"/>
+</kw>
+<kw name="Scroll" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:08.932628" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Animation"]]
+xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Cards"]]</msg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Animation"]]</arg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Cards"]]</arg>
+<doc>Scrolls from one element to another
+Key attributes for arbitrary elements are `id` and `name`. See
+`introduction` for details about locating elements.</doc>
+<status status="PASS" start="2024-06-20T15:44:04.272961" elapsed="4.659667"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:08.935631" level="INFO">Clicking element 'xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Expansion Panels"]]'.</msg>
+<msg time="2024-06-20T15:44:10.464624" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Expansion Panels"]]</msg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Expansion Panels"]]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-20T15:44:08.932628" elapsed="1.531996"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:12.863006" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Basic"]]</msg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Basic"]]</arg>
+<arg>15s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-20T15:44:10.464624" elapsed="2.398382"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:12.864993" level="INFO">Verifying element 'xpath=//android.widget.TextView[@text="Basic"]' contains exactly text 'Basic'.</msg>
+<msg time="2024-06-20T15:44:14.075501" level="INFO">xpath criteria: //android.widget.TextView[@text="Basic"]</msg>
+<arg>xpath=//android.widget.TextView[@text="Basic"]</arg>
+<arg>Basic</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-06-20T15:44:12.863006" elapsed="1.212495"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:14.079504" level="INFO">Clicking element 'xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Basic"]]'.</msg>
+<msg time="2024-06-20T15:44:14.704363" level="INFO">xpath criteria: //android.widget.LinearLayout[android.widget.TextView[@text="Basic"]]</msg>
+<arg>xpath=//android.widget.LinearLayout[android.widget.TextView[@text="Basic"]]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-20T15:44:14.076501" elapsed="0.627862"/>
+</kw>
+<status status="PASS" start="2024-06-20T15:44:01.156972" elapsed="13.548396"/>
+</kw>
+<kw name="check basic page">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:17.117354" level="INFO">xpath criteria: //android.widget.TextView[@text="Basic"]
+xpath criteria: //android.widget.TextView[@text="Basic"]</msg>
+<arg>xpath=//android.widget.TextView[@text="Basic"]</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-20T15:44:14.706365" elapsed="2.410989"/>
+</kw>
+<kw name="Get Text" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:18.384274" level="INFO">Element 'xpath=//android.widget.TextView[@text="Basic"]' text is 'Basic' </msg>
+<msg time="2024-06-20T15:44:18.384274" level="INFO">xpath criteria: //android.widget.TextView[@text="Basic"]</msg>
+<msg time="2024-06-20T15:44:18.385270" level="INFO">${text} = Basic</msg>
+<var>${text}</var>
+<arg>xpath=//android.widget.TextView[@text="Basic"]</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<status status="PASS" start="2024-06-20T15:44:17.118353" elapsed="1.266917"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Basic</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-06-20T15:44:18.385270" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:18.434002" level="INFO">criteria is com.material.components:id/bt_toggle_text</msg>
+<arg>id=com.material.components:id/bt_toggle_text</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-20T15:44:18.385270" elapsed="0.048732"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:18.436002" level="INFO">Clicking element 'id=com.material.components:id/bt_toggle_text'.</msg>
+<msg time="2024-06-20T15:44:19.566609" level="INFO">criteria is com.material.components:id/bt_toggle_text</msg>
+<arg>id=com.material.components:id/bt_toggle_text</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-20T15:44:18.434002" elapsed="1.132607"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:19.772610" level="INFO">criteria is com.material.components:id/bt_hide_text</msg>
+<arg>id=com.material.components:id/bt_hide_text</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-20T15:44:19.566609" elapsed="0.206001"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:19.774610" level="INFO">Clicking element 'id=com.material.components:id/bt_hide_text'.</msg>
+<msg time="2024-06-20T15:44:20.014612" level="INFO">criteria is com.material.components:id/bt_hide_text</msg>
+<arg>id=com.material.components:id/bt_hide_text</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-20T15:44:19.772610" elapsed="0.242002"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:20.016609" level="INFO">Clicking element 'id=com.material.components:id/bt_toggle_input'.</msg>
+<msg time="2024-06-20T15:44:21.990422" level="INFO">criteria is com.material.components:id/bt_toggle_input</msg>
+<arg>id=com.material.components:id/bt_toggle_input</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-20T15:44:20.014612" elapsed="1.975810"/>
+</kw>
+<kw name="input AOF into id=com.material.components:id/appCompatEditText and have placeholder is Name" source_name="input ${kw} into ${input_field} and have placeholder is ${text}">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:22.093422" level="INFO">criteria is com.material.components:id/appCompatEditText</msg>
+<arg>${input_field}</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-20T15:44:21.990422" elapsed="0.103998"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:22.097421" level="INFO">Verifying element 'id=com.material.components:id/appCompatEditText' contains exactly text 'Name'.</msg>
+<msg time="2024-06-20T15:44:22.210422" level="INFO">criteria is com.material.components:id/appCompatEditText</msg>
+<arg>${input_field}</arg>
+<arg>${text}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-06-20T15:44:22.094420" elapsed="0.116002"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:22.212419" level="INFO">Typing text 'AOF' into text field 'id=com.material.components:id/appCompatEditText'</msg>
+<msg time="2024-06-20T15:44:22.406425" level="INFO">criteria is com.material.components:id/appCompatEditText</msg>
+<arg>${input_field}</arg>
+<arg>${kw}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-06-20T15:44:22.211422" elapsed="0.195003"/>
+</kw>
+<status status="PASS" start="2024-06-20T15:44:21.990422" elapsed="0.416999"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:22.410427" level="INFO">Clicking element 'xpath=//android.widget.RadioButton[@text="Female"]'.</msg>
+<msg time="2024-06-20T15:44:23.110386" level="INFO">xpath criteria: //android.widget.RadioButton[@text="Female"]</msg>
+<arg>xpath=//android.widget.RadioButton[@text="Female"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-20T15:44:22.407421" elapsed="0.702965"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:23.113382" level="INFO">Clicking element 'id=com.material.components:id/bt_save_input'.</msg>
+<msg time="2024-06-20T15:44:23.940418" level="INFO">criteria is com.material.components:id/bt_save_input</msg>
+<arg>id=com.material.components:id/bt_save_input</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-20T15:44:23.110386" elapsed="0.830032"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:25.149583" level="INFO">criteria is com.material.components:id/snackbar_text
+criteria is com.material.components:id/snackbar_text</msg>
+<arg>id=com.material.components:id/snackbar_text</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-06-20T15:44:23.941420" elapsed="1.208163"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-06-20T15:44:25.151579" level="INFO">Verifying element 'id=com.material.components:id/snackbar_text' contains exactly text 'Data saved'.</msg>
+<msg time="2024-06-20T15:44:25.239582" level="INFO">criteria is com.material.components:id/snackbar_text</msg>
+<arg>id=com.material.components:id/snackbar_text</arg>
+<arg>Data saved</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-06-20T15:44:25.149583" elapsed="0.090998"/>
+</kw>
+<status status="PASS" start="2024-06-20T15:44:14.706365" elapsed="10.534216"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-06-20T15:44:25.240581" elapsed="2.116991"/>
+</kw>
+<status status="PASS" start="2024-06-20T15:43:40.057642" elapsed="47.300932"/>
+</test>
+<status status="PASS" start="2024-06-20T15:42:55.283253" elapsed="92.077318"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Robot-Appium">Robot-Appium</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Robot-Appium">Robot-Appium</stat>
 </suite>
 </statistics>
 <errors>
